@@ -24,26 +24,25 @@ func _process(_delta):
 
 func _physics_process(_delta):
 	if is_dashing == false:
-		velocity = move_dir.normalized()*move_speed 
+		velocity = move_dir.normalized()*move_speed
 	else:
 		velocity = prev_dir.normalized()*dash_speed
-	
+
 	move_and_slide()
 
 
 func get_input():
 	move_dir.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
 	move_dir.y = int(Input.is_action_pressed("down")) - int(Input.is_action_pressed("up"))
-	
+
 	if is_dashing == false and move_dir != Vector2(0,0):
 		prev_dir = move_dir
-	
+
 	if can_dash and Input.is_action_just_pressed("dash"):
 		start_dash()
 
 
 func start_dash():
-	print("dash started")
 	can_dash = false
 	is_dashing = true
 	await get_tree().create_timer(dash_time).timeout
@@ -51,12 +50,10 @@ func start_dash():
 
 
 func end_dash():
-	print("dash ended")
 	is_dashing = false
 	await get_tree().create_timer(dash_cooldown).timeout
 	reset_dash()
 
 
 func reset_dash():
-	print("dash reset")
 	can_dash = true
