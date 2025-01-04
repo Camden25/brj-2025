@@ -34,11 +34,13 @@ func _input(event) -> void:
 func start_drag(card: Card) -> void:
 	card_being_dragged = card
 	card.scale = Vector2(1,1)
+	card_being_dragged.z_index = 2
 
 
 func finish_drag() -> void:
 	card_being_dragged.scale = Vector2(1,1)
 	var card_slot_found: CardSlot = raycast_check_for_card_slot()
+	card_being_dragged.z_index = 1
 	if card_slot_found and !card_slot_found.card_in_slot:
 		player_hand_reference.remove_card_from_hand(card_being_dragged)
 		card_being_dragged.position = card_slot_found.position
@@ -75,7 +77,7 @@ func highlight_card(card: Card, hovered: bool):
 	if hovered:
 		card.scale = Vector2(1,1)
 		card.get_node("Sprite2D").offset.y = -50
-		card.z_index = 2
+		card.z_index = 1
 	else:
 		card.scale = Vector2(1,1)
 		card.get_node("Sprite2D").offset.y = 0

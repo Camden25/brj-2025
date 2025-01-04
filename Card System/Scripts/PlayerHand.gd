@@ -49,7 +49,7 @@ func update_hand_positions() -> void:
 func calculate_card_position(index) -> Vector2:
 	var total_width: float = (player_hand.size() - 1)
 	var relative_index: float = index/total_width
-	var x_offset: float = center_screen_x + relative_index * CARD_HAND_WIDTH - CARD_HAND_WIDTH/2
+	var x_offset: float = center_screen_x + relative_index * CARD_HAND_WIDTH - float(CARD_HAND_WIDTH)/2
 	var y_offset: float = HAND_Y_POSITION - calculate_height(relative_index)*CARD_HAND_HEIGHT
 	return Vector2(x_offset, y_offset)
 
