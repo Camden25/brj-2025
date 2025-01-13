@@ -1,7 +1,9 @@
 extends Node2D
 class_name InputManager
 
+@warning_ignore("unused_signal")
 signal left_mouse_button_clicked
+@warning_ignore("unused_signal")
 signal left_mouse_button_released
 
 const COLLISION_MASK_CARD = 1
