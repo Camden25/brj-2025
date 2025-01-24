@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Card System/Scripts/CardManager.gd" id="1_snaek"]
 [ext_resource type="PackedScene" uid="uid://pvwyokyjor8i" path="res://Card System/Scenes/CardSlot.tscn" id="3_gslff"]
 [ext_resource type="Script" path="res://Card System/Scripts/PlayerHand.gd" id="4_1cus3"]
-[ext_resource type="Texture2D" uid="uid://nm1smwwr0b7t" path="res://Card System/Assets/Deck.png" id="4_eo0mn"]
 [ext_resource type="Script" path="res://Card System/Scripts/Deck.gd" id="4_gdxjy"]
+[ext_resource type="Texture2D" uid="uid://ch63uhm64ybqh" path="res://Card System/Assets/red_back.png" id="5_7geuk"]
 [ext_resource type="Script" path="res://Card System/Scripts/InputManager.gd" id="6_l6tpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jopo"]
@@ -46,7 +46,7 @@ script = ExtResource("4_gdxjy")
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
 z_index = -2
 scale = Vector2(0.186589, 0.184426)
-texture = ExtResource("4_eo0mn")
+texture = ExtResource("5_7geuk")
 
 [node name="Area2D" type="Area2D" parent="Deck"]
 collision_layer = 4
