@@ -36,6 +36,6 @@ func raycast_at_cursor() -> void:
 			var card_found = result[0].collider.get_parent()
 			if card_found:
 				card_manager.start_drag(card_found)
-		if result_collision_mask == COLLISION_MASK_DECK:
+		if result_collision_mask == COLLISION_MASK_DECK and deck_reference.can_draw_cards == true:
 			# deck clicked
 			deck_reference.draw_card()

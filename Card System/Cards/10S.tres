@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://drxkeysdq2tuu"]
+
+[ext_resource type="Texture2D" uid="uid://c6dghs21eiaod" path="res://Card System/Assets/10S.png" id="1_n3o0b"]
+[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="2_rbrup"]
+
+[resource]
+script = ExtResource("2_rbrup")
+suit = "Spade"
+number = "10"
+image = ExtResource("1_n3o0b")

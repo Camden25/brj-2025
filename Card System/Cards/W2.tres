@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://d2ldduoe84buy"]
+
+[ext_resource type="Texture2D" uid="uid://572rkh2owvwx" path="res://Card System/Assets/purple_back.png" id="1_04bfl"]
+[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="2_lk7ja"]
+
+[resource]
+script = ExtResource("2_lk7ja")
+suit = "Wild"
+number = 14
+image = ExtResource("1_04bfl")

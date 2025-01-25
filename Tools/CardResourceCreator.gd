@@ -7,7 +7,7 @@ func _enter_tree() -> void:
 func create_cards() -> void:
 	print("Creating Cards")
 	for suit in ["Spade", "Club", "Heart", "Diamond"]:
-		for num in ["J","Q","K"]:
+		for num in ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]:
 			var card = CardResource.new()
 			card.number = num
 			card.suit = suit

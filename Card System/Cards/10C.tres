@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://c0j8n1i6altxn"]
+
+[ext_resource type="Texture2D" uid="uid://880okj7kls1q" path="res://Card System/Assets/10C.png" id="1_g0kje"]
+[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="2_2uhaj"]
+
+[resource]
+script = ExtResource("2_2uhaj")
+suit = "Club"
+number = "10"
+image = ExtResource("1_g0kje")

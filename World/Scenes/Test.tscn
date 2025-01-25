@@ -1,11 +1,69 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfscado5udhml"]
+[gd_scene load_steps=26 format=3 uid="uid://bfscado5udhml"]
 
 [ext_resource type="Script" path="res://Card System/Scripts/CardManager.gd" id="1_snaek"]
 [ext_resource type="PackedScene" uid="uid://pvwyokyjor8i" path="res://Card System/Scenes/CardSlot.tscn" id="3_gslff"]
 [ext_resource type="Script" path="res://Card System/Scripts/PlayerHand.gd" id="4_1cus3"]
 [ext_resource type="Script" path="res://Card System/Scripts/Deck.gd" id="4_gdxjy"]
 [ext_resource type="Texture2D" uid="uid://ch63uhm64ybqh" path="res://Card System/Assets/red_back.png" id="5_7geuk"]
+[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="5_ec71q"]
+[ext_resource type="Texture2D" uid="uid://bhgtiwdfswbke" path="res://Card System/Assets/6C.png" id="6_f00r0"]
 [ext_resource type="Script" path="res://Card System/Scripts/InputManager.gd" id="6_l6tpa"]
+[ext_resource type="Texture2D" uid="uid://cg6escfufxi18" path="res://Card System/Assets/4S.png" id="7_8s0y3"]
+[ext_resource type="Texture2D" uid="uid://b3tev4hqr065p" path="res://Card System/Assets/KH.png" id="8_s0ykh"]
+[ext_resource type="Texture2D" uid="uid://dxstpmbr7tjdh" path="res://Card System/Assets/JH.png" id="9_4vekb"]
+[ext_resource type="Texture2D" uid="uid://blxb4ysy64r8l" path="res://Card System/Assets/AS.png" id="10_lh47l"]
+[ext_resource type="Texture2D" uid="uid://cuyf8xixocv6r" path="res://Card System/Assets/QH.png" id="11_hn622"]
+[ext_resource type="Texture2D" uid="uid://bdvwyj4obvwxd" path="res://Card System/Assets/JD.png" id="12_m07cy"]
+[ext_resource type="Resource" uid="uid://brxx1n460omjp" path="res://Card System/Cards/W1.tres" id="12_sbx71"]
+[ext_resource type="Texture2D" uid="uid://b60lyqs0r4psb" path="res://Card System/Assets/8C.png" id="13_kunh0"]
+
+[sub_resource type="Resource" id="Resource_fjsr8"]
+script = ExtResource("5_ec71q")
+suit = "Club"
+number = ""
+image = ExtResource("6_f00r0")
+
+[sub_resource type="Resource" id="Resource_sobc5"]
+script = ExtResource("5_ec71q")
+suit = "Spade"
+number = ""
+image = ExtResource("7_8s0y3")
+
+[sub_resource type="Resource" id="Resource_n0yaq"]
+script = ExtResource("5_ec71q")
+suit = "Heart"
+number = ""
+image = ExtResource("8_s0ykh")
+
+[sub_resource type="Resource" id="Resource_eqhyx"]
+script = ExtResource("5_ec71q")
+suit = "Heart"
+number = ""
+image = ExtResource("9_4vekb")
+
+[sub_resource type="Resource" id="Resource_j30lv"]
+script = ExtResource("5_ec71q")
+suit = "Spade"
+number = ""
+image = ExtResource("10_lh47l")
+
+[sub_resource type="Resource" id="Resource_0sv6e"]
+script = ExtResource("5_ec71q")
+suit = "Heart"
+number = ""
+image = ExtResource("11_hn622")
+
+[sub_resource type="Resource" id="Resource_muv1a"]
+script = ExtResource("5_ec71q")
+suit = "Diamond"
+number = ""
+image = ExtResource("12_m07cy")
+
+[sub_resource type="Resource" id="Resource_q54gh"]
+script = ExtResource("5_ec71q")
+suit = "Club"
+number = ""
+image = ExtResource("13_kunh0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jopo"]
 size = Vector2(128, 180)
@@ -42,6 +100,8 @@ script = ExtResource("4_1cus3")
 [node name="Deck" type="Node2D" parent="." groups=["Deck"]]
 position = Vector2(150, 880)
 script = ExtResource("4_gdxjy")
+fixed_hand_size = true
+player_deck = Array[ExtResource("5_ec71q")]([SubResource("Resource_fjsr8"), SubResource("Resource_sobc5"), SubResource("Resource_n0yaq"), SubResource("Resource_eqhyx"), SubResource("Resource_j30lv"), SubResource("Resource_0sv6e"), SubResource("Resource_muv1a"), SubResource("Resource_q54gh"), ExtResource("12_sbx71")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
 z_index = -2

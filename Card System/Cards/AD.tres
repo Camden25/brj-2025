@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://d1yfw342rhpar"]
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://cw0xbbnirvy3o"]
 
-[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="1_lwsdn"]
-[ext_resource type="Texture2D" uid="uid://0p607vlnno8s" path="res://Card System/Assets/AD.png" id="1_qawfb"]
+[ext_resource type="Texture2D" uid="uid://0p607vlnno8s" path="res://Card System/Assets/AD.png" id="1_h4my0"]
+[ext_resource type="Script" path="res://Card System/Scripts/CardResource.gd" id="2_dukwe"]
 
 [resource]
-script = ExtResource("1_lwsdn")
+script = ExtResource("2_dukwe")
 suit = "Diamond"
-number = 1
-image = ExtResource("1_qawfb")
+number = "A"
+image = ExtResource("1_h4my0")
